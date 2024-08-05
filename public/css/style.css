@@ -1,3 +1,105 @@
-body{
-    background-color: pink;
+body {
+    height:100vh;
+}
+.container{
+    flex:1;
+}
+
+/* navbar */
+.navbar {
+    background-color: white;
+}
+
+.fa-compass {
+    color: #ff385a;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* footer */
+.f-info {
+    position: sticky !important;
+    margin-bottom: 0 !important;
+    margin-top: 1rem ;
+    height: 6rem;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.f-info-link a {
+    text-decoration: none;
+    margin-right: 0.3rem;
+    color: #222222;
+}
+
+.f-info-link a:hover {
+    text-decoration: underline;
+}
+
+/* all listings cards */
+.allcards {
+    text-decoration: none !important;
+}
+
+.card {
+    border: none !important;
+    margin-bottom: 1rem;
+    width: 100%; /* Change width to be responsive */
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    height: 18rem;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+/* card effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.show-img {
+    width: 60% !important; 
+    height: 20em !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 2rem !important;
+}
+.show-btn{
+   margin-bottom: 5rem;
+}
+
+.delete-btn{
+    background-color: #ff385a !important;
+    border: none !important;
+}
+.delete-btn:hover{
+   opacity: 0.85;
+}
+.edit-btn{
+    border: none !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
