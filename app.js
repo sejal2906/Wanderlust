@@ -109,9 +109,6 @@ app.engine("ejs", ejsMate);
 
 
 // ================= ROUTES =================
-app.get("/", (req, res) => {
-    res.send("I am root");
-});
 
 app.use("/listings", listingRoutes);
 app.use("/listings/:id/reviews", reviewRoutes);
