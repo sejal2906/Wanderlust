@@ -1,0 +1,161 @@
+/* =========================
+   RESET + PAGE LAYOUT
+========================= */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* base for rem */
+}
+
+/* Flex layout for sticky footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Content grows to push footer down */
+.page-content {
+    flex: 1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background-color: white !important;
+    height: 5rem;
+    border-bottom: 0.0625rem solid #e5e5e5;
+}
+
+/* Remove list styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo icon */
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+/* Nav links */
+.nav-link {
+    color: #222222 !important;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: #fe424d !important;
+}
+
+/* =========================
+   LISTING CARDS
+========================= */
+
+.card {
+    border: none !important;
+    border-radius: 1rem !important;
+    overflow: hidden !important;
+    transition: 0.3s;
+    margin-bottom: 2rem;
+    width: 20rem; cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 0.0625rem solid #e5e5e5;
+    padding: 2rem 1rem 1rem;
+    margin-top: auto; /* pushes footer to bottom */
+}
+
+/* Footer main container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Brand section */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer-brand {
+    font-size: 1.1rem;
+}
+
+/* Brand icon */
+.footer-icon {
+    font-size: 1.4rem;
+    color: #fe424d;
+}
+
+/* Social icons */
+.footer-right {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-right a {
+    font-size: 1.3rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #000;
+    transform: scale(1.15);
+}
+
+/* Copyright */
+.footer-bottom {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+/* .btn{
+    background-color: #424141 !important;
+    margin-bottom: 4rem;
+} */
+.btn:hover{
+    opacity:0.8;
+}

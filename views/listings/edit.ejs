@@ -1,0 +1,114 @@
+<% layout("layout/boilerplate") -%>
+
+<div class="container mt-4">
+
+    <h3 class="mb-4">Edit Listing</h3>
+
+    <form 
+        action="/listings/<%= listing._id %>?_method=PUT" 
+        method="post"
+        novalidate  class="needs-validation row g-3"
+        enctype="multipart/form-data"
+    >
+
+        <!-- Title -->
+        <div class="col-12">
+            <label class="form-label">Title</label>
+            <input 
+                type="text"
+                name="listing[title]"
+                value="<%= listing.title %>"
+                class="form-control"
+                required
+            >
+            <div class="valid-feedback">
+      Looks good!
+    </div>
+        </div>
+
+        <!-- Description -->
+        <div class="col-12">
+    <label class="form-label">Description</label>
+
+    <textarea
+        name="listing[description]"
+        rows="4"
+        class="form-control"
+        required><%= listing.description %></textarea>
+
+    <div class="invalid-feedback">
+        Please provide a description.
+    </div>
+</div>
+
+        <!-- Image URL -->
+        <div class="col-md-6">
+            <p>Original Image</p>
+             <img src="<%=originalImageUrl%>" alt="originalImage" >
+             <br>
+            <label for="image" class="form-label">
+                Upload Image
+            </label>
+            <input type="file"
+                   class="form-control"
+                   id="image"
+                   name="listing[image]"
+                   placeholder="Upload Image"
+                   value="<%=listing.image.url%>" >
+        </div>
+
+        <!-- Price (Full Width) -->
+        <div class="col-12">
+            <label class="form-label">Price</label>
+            <input 
+                type="number"
+                name="listing[price]"
+                value="<%= listing.price %>"
+                class="form-control"
+                required
+            >
+            <div class="invalid-feedback">
+                Please provide a price.
+            </div>
+        </div>
+
+        <!-- Location + Country Side by Side -->
+        <div class="col-md-6">
+            <label class="form-label">Location</label>
+            <input 
+                type="text"
+                name="listing[location]"
+                value="<%= listing.location %>"
+                class="form-control"
+                required
+            >
+            <div class="invalid-feedback">
+                Please provide a location.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Country</label>
+            <input 
+                type="text"
+                name="listing[country]"
+                value="<%= listing.country %>"
+                class="form-control"
+                required
+            >
+            <div class="invalid-feedback">
+                Please provide a country.
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+            <button class="btn btn-dark px-4 py-2">
+                Update Listing
+            </button>
+        </div>
+
+    </form>
+
+</div>
+ <script src="/js/script.js"></script>
